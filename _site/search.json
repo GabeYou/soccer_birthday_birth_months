@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T20:55:32-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "EU Soccer Player Birth Months",
+      "description": "Graph to find out if more players born in earlier months are more likely to be professional soccer players than players born in later months.\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T20:55:44-04:00"
+    }
+  ],
+  "collections": []
+}

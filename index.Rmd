@@ -1,0 +1,33 @@
+---
+title: "EU Soccer Player Birth Months"
+description: |
+ Graph to find out if more players born in earlier months are more likely to be professional soccer players than players born in later months.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+
+
+```
+
+```{r }
+raw_data <- read.csv("birthdates.csv") 
+  x <- raw_data
+  
+```
+```{r}
+
+  x %>% 
+  mutate(date = parse_date(str_sub(value, 2, 11))) %>% 
+  mutate(raw_month = months(date)) %>% 
+  mutate(month = parse_factor(raw_month, levels = month.name)) %>% 
+  group_by(month) %>% 
+  summarize(total = n()) %>% 
+  ggplot(mapping = aes(x = month, y = total))+
+  geom_col()+
+  labs(title = "Birth Months of Soccer Players")
+```
+
+
